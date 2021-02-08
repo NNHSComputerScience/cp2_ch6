@@ -25,6 +25,8 @@ def function():  # first line is the FUNCTION HEADER
 function()
 print(function())   # returns 'None'
 
+# INSTRUCTOR'S NOTE: Do Peer Instruction #1 & #2
+
 # 3: DOCSTRING. A special way to document a function;
 #    It must be triple quoted (single or double), and on the first line after the function header. 
 #    Can provide useful information when attempting to use the function.
