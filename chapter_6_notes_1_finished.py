@@ -1,29 +1,29 @@
-# Chapter 6 guided notes #1: Functions
+# Chapter 6 notes #1: Functions Intro
 
 # Python lets you create your own functions.
 # A FUNCTION is a reusable block of code that performs a specific task.
-#   Functions allow you to abstract away unneccessary information.
+#   Functions allow you to abstract away unneccessary information and leverage modular design.
 
-#  Abstraction is naming parts of a program to hide all but the most
-#   relevant details. Lets you think about the big picture without worrying
-#   about the details.
+#  ABSTRACTION is hiding all but the most relevant details. 
+#   Lets you think about the big picture without worrying about the details.
+#   e.g. variable or function names are an abstraction of their actual contents.
 
 # 1: Creating a function is reffered to as
 #    "Defining a Function"
 
-# entire function is called the 'function definition'
-def function():  # first line is called the 'function header'
+# entire function is called the FUNCTION DEFINITION
+def function():  # first line is the FUNCTION HEADER
     print ("Hello, I'm a function!\n")
 
 # 2: Using a function is referred to as 
-#    "Calling a function"
+#    "Calling a function", or a FUNCTION CALL
 
 function()
 print(function())   # returns 'None'
 
 # 3: DOCSTRING. A special way to document a function;
-#    It must be triple quoted, and on the first line.  Can provide
-#    useful info when attempting to use the function.
+#    It must be triple quoted (single or double), and on the first line after the function header. 
+#    Can provide useful information when attempting to use the function.
 
 def greeting():
     """This will greet the user to a program"""
@@ -39,11 +39,12 @@ help(len)
 #      from a function call. 
 #    ARGUMENTS: Values sent to a function to use. (put in parentheses of a 
 #      function call)
+#   *note: These terms are sometimes used interchangably, but we will stick to these strict definitions for this class.
 
 def display(message):   # message is a parameter
     print (message)
 
-display("Here is a message for you.\n") # the string is an argument
+display("Here is a message for you.\n") # the string "Here is a message for you.\n" is an argument
 
 # Trap... If I define a function with one parameter, then I must
 #       use the same number of arguments when calling the function
@@ -61,7 +62,8 @@ display2("Here is a message for you", name1) # arguments sent and assigned by po
 # display2("Here is a message for you") is an ERROR
 
 
-# 6: You can get values out of a function by returning value(s). 
+# 6: RETURNING.  You can get value(s) out of a function by returning value(s). 
+#   A RETURN VALUE is a value recieved back from a funciton call.
 #    You can return a value from a function by using
 #    a RETURN STATEMENT. A function always ends after
 #    executing a return statement, and the RETURN VALUE is returned.
