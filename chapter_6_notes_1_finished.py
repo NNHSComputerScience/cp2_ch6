@@ -1,5 +1,9 @@
 # Chapter 6 notes #1: Functions Intro
 
+# MODULAR DESIGN makes a large project more manageable and increases the reusability of software.
+#   A MODULE is a logically independent unit that handles a specific task.
+#   Functions provide the ability to write modular code. 
+
 # Python lets you create your own functions.
 # A FUNCTION is a reusable block of code that performs a specific task.
 #   Functions allow you to abstract away unneccessary information and leverage modular design.
