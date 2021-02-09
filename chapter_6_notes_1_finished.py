@@ -93,7 +93,7 @@ print("Return value:", return_value)
 print("Left", number1)
 print("Right", number2)
 
-# *** INSTRUCTOR'S NOTE: Do Peer instrution #3 & #4 ***
+# *** INSTRUCTOR'S NOTE: Show in Python Visualizer (Python Tutor) and Do Peer instrution #3 & #4 ***
 
 # CHALLENGE: Can you define a function that can simulate
 #           the rolling of two dies and return both values?
