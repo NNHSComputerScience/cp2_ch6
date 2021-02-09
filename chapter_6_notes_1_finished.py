@@ -25,7 +25,7 @@ def function():  # first line is the FUNCTION HEADER
 function()
 print(function())   # returns 'None'
 
-# INSTRUCTOR'S NOTE: Do Peer Instruction #1 & #2
+# *** INSTRUCTOR'S NOTE: Do Peer Instruction #1 & #2 ***
 
 # 3: DOCSTRING. A special way to document a function;
 #    It must be triple quoted (single or double), and on the first line after the function header. 
@@ -92,6 +92,8 @@ number1, number2 = return_value # unpack tuple into its elements
 print("Return value:", return_value)
 print("Left", number1)
 print("Right", number2)
+
+# *** INSTRUCTOR'S NOTE: Do Peer instrution #3 & #4 ***
 
 # CHALLENGE: Can you define a function that can simulate
 #           the rolling of two dies and return both values?
