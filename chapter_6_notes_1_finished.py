@@ -127,6 +127,9 @@ tot2 = add_2(roll3, roll4)
 print("\nThe total of rolls 1 & 2 is", tot)
 print("\nThe total of rolls 3 & 4 is", tot2)
 
+# UNIT TEST - test if a function works on its own
+# INTEGRATION TEST - test if a function works with other functions (possibly in the main code area)
+
 # simple interest function
 def simple_interest(p, r, t):
     """Calculates and returns simple interest given the principal, interest rate,
@@ -146,20 +149,28 @@ def compound_interest(p, r, t, n):
 #   test more than one thing
 #   test the upper and lower bounds
 #   consider unexpected cases (negatives, types, etc.)
+#   NOTE: you may have to deal with the imprecision of floating point values when testing numbers, 
+#         in which case you want to test if the expected value is 'close enough'
 
 # simple unit tests
 print(simple_interest(100, .10, 2))
-print("Expected:", 20)
+print("Expected:", 20.0)
 
 print()
-print(simple_interest(5500, .07, 5))
-print("Expected:", 1925)
+result = simple_interest(5500, .07, 5)
+print("Actual:", result)
+print("Expected:", 1925.0)
+print("Pass test?", result - 1925.0 < 0.001)
 
-# compound unit tests
+# compound interest unit tests
 print()
-print(compound_interest(1000, .10, 5, 4))
+result = compound_interest(1000, .10, 5, 4)
+print("Actual:", result)
 print("Expected:", 638.62)
+print("Pass test?", result - 638.62 < 0.005)
 
 print()
-print(compound_interest(5000, .20, 4, 2))
+result = compound_interest(5000, .20, 4, 2)
+print("Actual:", result)
 print("Expected:", 5717.94)
+print("Pass test?", result - 5717.94 < 0.005)
