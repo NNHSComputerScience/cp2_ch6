@@ -1,7 +1,5 @@
 # Chapter 6 guided notes #2
 
-
-
 # 1: GLOBAL vs. LOCAL SCOPE
 #   Scope defines the accessibility of separate parts of a program. Functions
 #       have a local scope by default, which means variables (including parameters)
@@ -41,23 +39,6 @@ print("Back in the global scope, value is still:", value, "\n")
 
 change_global() # changes the global variable to -10 and prints it
 print("Back in the global scope, value has now changed to:", value)
-
-input("\nPress the enter key to continue.")
-
-# CHALLENGE: create a new function called make_omelette() that prints the ingredients
-#   for an omelette. Pass in the ingredient(s) as a paramenter (local variable) and use a 
-#   global ingredient (eggs) to make at least 2 different omelettes.
-
-eggs = "Eggs" # global ingredient
-
-def make_omelette(*ingredients): # parameter defines local ingredients
-    """Makes omelettes using both local and global variable ingredients"""
-    print("\nYou made an omelette with:\n" + eggs)
-    for i in ingredients:
-        print(i)
-    
-make_omelette("Peppers", "Onion", "Tomatoes")
-make_omelette("Cheese", "Broccoli", "Fritos")
 
 input("Press enter to continue.")
 
