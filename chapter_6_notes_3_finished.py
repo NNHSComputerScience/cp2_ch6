@@ -1,5 +1,21 @@
 # day 3 notes on functions
 
+# unlimited number of arguments
+#   Certain functions(like print()) need to handle any number of arguments.
+#   Use asterisk before parameter name; turns parameter into tuple of X length.
+
+def grade_ave(*args):
+    """Calculates the average from any number of grades"""
+    print ("Tuple created from arguments:", args) 
+    total=0
+    for i in args:
+        total+=i
+    grade_ave= total/len(args)
+    return grade_ave
+
+print(grade_ave(80, 82, 88, 90))
+print(grade_ave(60, 70, 80, 90, 100))
+
 # default parameter values
 #   you have the option to assign a default value, so that if no
 #   value is passed to the function it will use the value assigned
