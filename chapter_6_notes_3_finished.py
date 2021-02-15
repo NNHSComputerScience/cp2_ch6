@@ -16,6 +16,22 @@ def grade_ave(*args):
 print(grade_ave(80, 82, 88, 90))
 print(grade_ave(60, 70, 80, 90, 100))
 
+# CHALLENGE: create a new function called make_omelette() that prints the ingredients
+#   for an omelette. Pass in unlimited ingredient(s) as a paramenter (local variable) and use a 
+#   global ingredient (eggs) to make at least 2 different omelettes with different ingredients.
+
+eggs = "Eggs" # global ingredient
+
+def make_omelette(*ingredients): # parameter defines local ingredients
+    """Makes omelettes using both local and global variable ingredients and"""
+    print("\nYou made an omelette with:\n" + eggs)
+    for i in ingredients:
+        print(i)
+    
+make_omelette("Peppers", "Onion", "Tomatoes")
+make_omelette("Cheese", "Broccoli", "Fritos")
+
+
 # default parameter values
 #   you have the option to assign a default value, so that if no
 #   value is passed to the function it will use the value assigned
