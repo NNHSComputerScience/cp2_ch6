@@ -1,13 +1,31 @@
 # Chapter 6 guided notes #2
 
-# 1: GLOBAL vs. LOCAL SCOPE
-#   Scope defines the accessibility of separate parts of a program. Functions
+# SCOPE defines the accessibility of separate parts of a program. Functions
 #       have a local scope by default, which means variables (including parameters)
 #       initialized within a function are LOCAL VARIBALES, and only exist within that particular function.
+
+def demo_local(param1, param2):
+    """function to demonstrate local variables"""
+    local1 = "toast"
+    print("Local parameter 1:", param1)
+    print("Local parameter 2:", param2)
+    print("Local variable 1:", local1)
+    return (param1, param2, local1)
+
+demo_local("butter", "jelly")
+#print(local1) # variables are not defined outside the function (i.e. they don't exist!)
+#print(param1)
+#print(param2)
+
+# if you need to access information from within a function, you are in need of an output, or return value.
+v1, v2, v3 = demo_local("butter", "jelly")
+print("Returned values from the 'demo_local' function:", v1, v2, v3)
+
+# 2: GLOBAL vs. LOCAL SCOPE
 #       GLOBAL VARIABLES initialized outside of functions are accessible throughout 
 #       a program, and therefore have a global scope.
  
-# Global Reach Example - demonstrates local and global variables
+# Global Reach Example - demonstrates global variable access
 #   define functions
 def read_global():
     """Accessing a global variable from inside a function"""
@@ -27,7 +45,8 @@ def change_global():
     value = -10
     print("From inside the local scope of change_global(), value is:", value)
 
-# main program WRITE THIS PART FIRST TOGETHER AND THEN WRITE FUNCTIONS
+# INSTRUCTOR NOTE: write the main and function headers first and then implement the functions
+# main program 
 value = 10 # value is a global variable because we're in the global scope here
 print("In the global scope, value has been set to:", value, "\n")
 
@@ -39,6 +58,9 @@ print("Back in the global scope, value is still:", value, "\n")
 
 change_global() # changes the global variable to -10 and prints it
 print("Back in the global scope, value has now changed to:", value)
+
+# ENCAPSULATION - Keeps code logically independent by ‘hiding’ information from other parts of a program.
+#  Functions should be written to leverage encapsulation and therefore only rely on local variables (if possible).
 
 input("Press enter to continue.")
 
