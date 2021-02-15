@@ -1,15 +1,12 @@
 # Chapter 6 guided notes #2
 
-# ENCAPSULATION
-#   Helps keep code independent by hiding (or encapsulating) the
-#   details. Variables(including parameters) created inside a
-#   function cannot be directly accessed outside the function.
+
 
 # 1: GLOBAL vs. LOCAL SCOPE
 #   Scope defines the accessibility of separate parts of a program. Functions
 #       have a local scope by default, which means variables (including parameters)
-#       initialized within a function only exist within that particular function. 
-#       Global variables initialized outside of functions are accessible throughout 
+#       initialized within a function are LOCAL VARIBALES, and only exist within that particular function.
+#       GLOBAL VARIABLES initialized outside of functions are accessible throughout 
 #       a program, and therefore have a global scope.
  
 # Global Reach Example - demonstrates local and global variables
@@ -18,6 +15,9 @@ def read_global():
     """Accessing a global variable from inside a function"""
     print("From inside the local scope of read_global(), value is:", value)
 
+# Shadowing - When a local variable has the same name as a global variable we say that the local shadows the global. 
+#  A shadow means that the global variable cannot be accessed by Python because the local variable will be found first. 
+#  This is another good reason not to use global variables. 
 def shadow_global():
     """Creating a local copy of the global variable name""" 
     value = -10 # using the same variable name is not encouraged to avoid this!
@@ -80,26 +80,3 @@ def main(): # will never have any parameters
 
 #   call main function
 main() # will never use any arguments
-
-input("Press enter to continue.")
-
-# 3: unlimited number of arguments
-#   Certain functions(like print()) need to handle any number of arguments.
-#   Use asterisk before parameter name; turns parameter into tuple of X length.
-
-# CHALLENGE: Update the grade_ave() function to only have one
-#   parameter so it can take in any number of student grades and return the 
-#   average grade.
-
-def grade_ave2(*args):
-    """Calculates the average from any number of grades"""
-    print ("Tuple created from arguments:", args) 
-    total=0
-    for i in args:
-        total+=i
-    grade_ave= total/len(args)
-    return grade_ave
-
-print(grade_ave2(80, 82, 88, 90))
-print(grade_ave2(60, 70, 80, 90, 100))
-
