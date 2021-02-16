@@ -45,6 +45,8 @@ def change_global():
     value = -10
     print("From inside the local scope of change_global(), value is:", value)
 
+# INSTRUCTOR NOTE: Peer Instruction Questions #5 & #6
+    
 # INSTRUCTOR NOTE: write the main and function headers first and then implement the functions
 # main program 
 value = 10 # value is a global variable because we're in the global scope here
@@ -83,3 +85,7 @@ def main(): # will never have any parameters
 
 #   call main function last
 main() # will never use any arguments
+
+# INSTRUCTOR NOTE:  Run in Python Visualizer - http://pythontutor.com/visualize.html
+#                   Peer Instruction Questions #7 & #8
+
