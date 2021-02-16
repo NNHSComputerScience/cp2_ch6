@@ -1,4 +1,4 @@
-# Chapter 6 guided notes #2
+# Chapter 6 notes #2
 
 # SCOPE defines the accessibility of separate parts of a program. Functions
 #       have a local scope by default, which means variables (including parameters)
@@ -21,7 +21,7 @@ demo_local("butter", "jelly")
 v1, v2, v3 = demo_local("butter", "jelly")
 print("Returned values from the 'demo_local' function:", v1, v2, v3)
 
-# 2: GLOBAL vs. LOCAL SCOPE
+# GLOBAL vs. LOCAL SCOPE
 #       GLOBAL VARIABLES initialized outside of functions are accessible throughout 
 #       a program, and therefore have a global scope.
  
@@ -64,22 +64,22 @@ print("Back in the global scope, value has now changed to:", value)
 
 input("Press enter to continue.")
 
-# 2: main function
+# MAIN FUNCTION
 #   encapsulates main program
 
-#   define functions
+#   define functions first
 def grade_ave(score1, score2, score3):
     """Calculates the average of 3 grades"""
     total = score1 + score2 + score3
     grade_ave = total/3
     return grade_ave
 
-#   define main function
+#   define main function next
 def main(): # will never have any parameters
     """Runs main program"""
     print("Welcome!")
     score = grade_ave(80,90,85)
     print(score)
 
-#   call main function
+#   call main function last
 main() # will never use any arguments
