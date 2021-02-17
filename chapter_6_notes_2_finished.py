@@ -26,6 +26,8 @@ print("Returned values from the 'demo_local' function:", v1, v2, v3)
 #       a program, and therefore have a global scope.
  
 # Global Reach Example - demonstrates global variable access
+# INSTRUCTOR NOTE: write the main and function headers first and then implement the functions
+
 #   define functions
 def read_global():
     """Accessing a global variable from inside a function"""
@@ -47,7 +49,6 @@ def change_global():
 
 # INSTRUCTOR NOTE: Peer Instruction Questions #5 & #6
     
-# INSTRUCTOR NOTE: write the main and function headers first and then implement the functions
 # main program 
 value = 10 # value is a global variable because we're in the global scope here
 print("In the global scope, value has been set to:", value, "\n")
