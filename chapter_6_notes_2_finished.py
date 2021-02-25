@@ -71,18 +71,19 @@ input("Press enter to continue.")
 #   encapsulates main program
 
 #   define functions first
-def grade_ave(score1, score2, score3):
-    """Calculates the average of 3 grades"""
-    total = score1 + score2 + score3
-    grade_ave = total/3
-    return grade_ave
+def grade_ave(scores):
+    """Calculates the average from a list of grades"""
+    total = 0
+    for grade in scores:
+        total += grade
+    return total / len(scores)
 
 #   define main function next
 def main(): # will never have any parameters
     """Runs main program"""
     print("Welcome!")
-    score = grade_ave(80,90,85)
-    print(score)
+    ave_score = grade_ave([80,90,85])
+    print(ave_score)
 
 #   call main function last
 main() # will never use any arguments
