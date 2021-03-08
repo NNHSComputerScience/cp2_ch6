@@ -42,11 +42,13 @@ def bday(name="Missing", age=0):
     print ("Wow", name, "you are", age, "years old!")
 bday()
 
-#can override default with call (positional or keyword arguments)
+# can override default with call (positional or keyword arguments)
+ # POSITIONAL ARGUMENTS - arguments passed in the same order as the parameters are specified
+ # KEYWORD ARGUMENTS - arguments passed in a different order than the parameters are specified
 bday("Matt",33)
 bday("Matt")  # default parameters allow you to omit arguments from the function call
-# bday()  # still required to send other arguents not asssigned a default value
-bday(age = 33, name = "Frank") # keyword arguments allow you to pass arguments out of position
+# bday()  # still required to send other arguments not asssigned a default value
+bday(age = 33, name = "Frank") # using keyword arguments 
 
 # How might this be useful?
 #   Imagine you are writing a battle() function and want to assign the
