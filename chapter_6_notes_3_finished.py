@@ -49,7 +49,8 @@ battle(1000)
 
 # CHALLENGE: create a new function called make_omelette() that prints the ingredients for an omelette. 
 #   Pass in unlimited ingredient(s) as a paramenter (local variable) and use a global ingredient (eggs) 
-#   to make at least 2 different omelettes with different ingredients.
+#   to make at least 2 different omelettes with different ingredients. In the function, print all the ingredients
+#   in the omelette using a for loop.
 
 eggs = "Eggs" # global ingredient
 
