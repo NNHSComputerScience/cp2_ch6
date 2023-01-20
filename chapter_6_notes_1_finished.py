@@ -1,8 +1,8 @@
-# Chapter 6 notes #1: Functions Intro
-
-# MODULAR DESIGN makes a large project more manageable and increases the reusability of software.
-#   A MODULE is a logically independent unit that handles a specific task.
-#   Functions provide the ability to write modular code. 
+"""
+Name: 
+Title: Notes on Functions
+Description: Notes on the basics of defining and using functions in Python.
+"""
 
 # Python lets you create your own functions.
 # A FUNCTION is a reusable block of code that performs a specific task.
@@ -12,18 +12,18 @@
 #   Lets you think about the big picture without worrying about the details.
 #   e.g. variable or function names are an abstraction of their actual contents.
 
-# 1: Creating a function is reffered to as
-#    "Defining a Function"
+# 1: Creating a function is reffered to as... Defining a Function
 
-# entire function is called the FUNCTION DEFINITION
-def function():  # first line is the FUNCTION HEADER
-    print ("Hello, I'm a function!\n")
+# FUNCTION DEFINIITON is the entire function, both header and body.
+def hello_printer():  # FUNCTION HEADER is the first line of a function definition.
+    print ("Hello, World.")  # FUNCTION BODY is the indented block of code below the header.
 
-# 2: Using a function is referred to as 
-#    "Calling a function", or a FUNCTION CALL
+# 2: Using a function is referred to as... "calling a function" or a FUNCTION CALL
 
-function()
-print(function())   # returns 'None'
+hello_printer()
+hello_printer()
+#hello_printer  # always need parentheses in a function call.
+print(hello_printer())  # returns 'None'
 
 # *** INSTRUCTOR'S NOTE: Do Peer Instruction #1 & #2 ***
 
@@ -60,13 +60,11 @@ display("Here is a message for you.\n") # the string "Here is a message for you.
 
 # 5: You can have multiple parameters:
 
-def display2(message, name):
-    print (message, name)
+def message2(message, name):
+	"""A message said by a person."""
+	print(name + ":" , message)
 
-name1 = input("Name: ").title()
-display2("Here is a message for you", name1) # arguments sent and assigned by position
-# display2("Here is a message for you") is an ERROR
-
+message2("Hello, class.", "Mr. Schmit")  # arguments are accepted in positional order
 
 # 6: RETURNING.  You can get value(s) out of a function by returning value(s). 
 #   A RETURN VALUE is a value recieved back from a funciton call.
@@ -75,7 +73,9 @@ display2("Here is a message for you", name1) # arguments sent and assigned by po
 #    executing a return statement, and the RETURN VALUE is returned.
 
 def give_me_five():
-    return 5
+    """Returns the number five."""
+	print("Here is your number 5!")
+	return 5
     print("test") # unreachable code (function ends after the return statement)
 
 number = give_me_five()
