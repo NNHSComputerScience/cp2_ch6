@@ -62,8 +62,8 @@ print("Back in the global scope, value is still:", value, "\n")
 change_global() # changes the global variable to -10 and prints it
 print("Back in the global scope, value has now changed to:", value)
 
-# ENCAPSULATION - Keeps code logically independent by ‘hiding’ information from other parts of a program.
-#  Functions should be written to leverage encapsulation and therefore only rely on local variables (if possible).
+# ENCAPSULATION - Keeps code logically independent by ‘hiding’ information from other parts of a program, thus reducing dependencies. 
+#   Functions should be written to leverage encapsulation and therefore only rely on local variables whenever possible.
 
 input("Press enter to continue.")
 
