@@ -182,13 +182,13 @@ def main():
 		print()
 		action = input("\nChoose an action, {0} --> ".format(player_name))
 		if action == "travel" or action == "t":
-			if food_remaining <= 4:
+			if food_remaining <= 49:
 				print("You have", food_remaining, "food remaining. You must hunt for food before travelling any further.")
 			else:
 				handle_travel()
 		elif action == "rest" or action == "r":
-			if food_remaining <= 4:
-				print("You have", food_remaining, "food remaining. You must hunt for food before resting any further.")
+			if health_level > 4:
+				print("You have", health_level, "health remaining out of", MAX_HEALTH, "possible. Choose another option.")
 			else:
 				handle_rest()
 		elif action == "hunt" or action == "h":
