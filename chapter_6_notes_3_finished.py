@@ -39,31 +39,44 @@ bday("Tim") # combining positional and default parameters
 #   Imagine you are writing a battle() function for the Oregon Trail and want to assign the
 #     potential enemy a default health of 100. You can use a default parameter for that.
 
-def battle(enemy_hp = 100):
-	"""A battle between the player and an enemy."""
+import time
+# globals
+hero = "Link"
+health = 100  
+
+def battle(enemy_hp = 10):
+	"""Allows a battle to occur between a hero and an enemy of any strength.
+ 	param - enemy_hp = the starting hp of the enemy we want to fight. Defaults to 10.
+  	return - enemy's hp after the battle
+	"""
 	global health
-	print(f"{hero} has encountered an enemy!")
+	print(f"\n{hero} has encountered an enemy!")
 	print("The enemy's hp is", enemy_hp)
 	fight = input("Would you like to attack? (y or n): ").lower()
 	if fight == "y":
 		while enemy_hp > 0 and health > 0:
-			print("You swing and attack the enemy!")
-			time.sleep(2)
-			rand = random.randrange(2)
+			print("\nYou swing and attack the enemy!")
+			time.sleep(1)
+			rand = random.randrange(3)
 			if rand == 1:
-				print("You scored a direct hit!")
-				enemy_hp -= 10
-			else:
 				print("You miss and the enemy strikes you!")
 				health -= 10
-			print(f"{hero}'s health:{health}")
+			else:
+				print("You scored a direct hit!")
+				enemy_hp -= 10
+			print(f"\n{hero}'s health:{health}")
 			print(f"Enemy's health:{enemy_hp}")
-		if enemy_hp > 0:
-			print("The enemy has been slain!")
+		if enemy_hp <= 0:
+			print("\nThe enemy has been slain!")
 		else:
-			print(f"{hero} has been been tragically defeated by the fearsome dragon")
+			print(f"\n{hero} has been been tragically defeated...")
 	return enemy_hp
 
-battle()
-battle(50)
-battle(1000)
+# main
+print("\nLet the battle commence!")
+
+battle()  # battle a default enemy
+battle(100)  # battle an equal strength enemy
+battle(500)  # battle a boss enemy
+
+print("\nThe battle is over!")
