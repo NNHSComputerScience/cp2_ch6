@@ -40,25 +40,30 @@ bday("Tim") # combining positional and default parameters
 #     potential enemy a default health of 100. You can use a default parameter for that.
 
 def battle(enemy_hp = 100):
-	"""a battle between a player and an enemy"""
-	pass
+	"""A battle between the player and an enemy."""
+	global health
+	print(f"{hero} has encountered an enemy!")
+	print("The enemy's hp is", enemy_hp)
+	fight = input("Would you like to attack? (y or n): ").lower()
+	if fight == "y":
+		while enemy_hp > 0 and health > 0:
+			print("You swing and attack the enemy!")
+			time.sleep(2)
+			rand = random.randrange(2)
+			if rand == 1:
+				print("You scored a direct hit!")
+				enemy_hp -= 10
+			else:
+				print("You miss and the enemy strikes you!")
+				health -= 10
+			print(f"{hero}'s health:{health}")
+			print(f"Enemy's health:{enemy_hp}")
+		if enemy_hp > 0:
+			print("The enemy has been slain!")
+		else:
+			print(f"{hero} has been been tragically defeated by the fearsome dragon")
+	return enemy_hp
 
 battle()
 battle(50)
 battle(1000)
-
-# CHALLENGE: create a new function called make_omelette() that prints the ingredients for an omelette. 
-#   Pass in unlimited ingredient(s) as a paramenter (local variable) and use a global ingredient (eggs) 
-#   to make at least 2 different omelettes with different ingredients. In the function, print all the ingredients
-#   in the omelette using a for loop.
-
-eggs = "Eggs" # global ingredient
-
-def make_omelette(*ingredients):  # paramenter defines an unlimited number of local ingredients
-	print("\nYou made an omelette with:\n" + eggs)
-	for ing in ingredients:
-		print(ing)
-
-make_omelette("Peppers", "Onion", "Tomatoes")
-make_omelette("Cheese", "Bacon")
-make_omelette("Fritos", "Olives", "Fish", "Toothpaste")
